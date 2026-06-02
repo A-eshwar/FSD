@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>  
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Animations</title>
+        <style>
+            /*part3 Exercise 10*/
+            @keyframes spin {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+            .loader{
+                border: 4px solid #f3f3f3;
+                border-top: 4px solid #3498db;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                animation: spin 1s linear infinite;
+            }
+            /*part3 Exercise 11*/
+            @keyframes move {
+                0% {
+                    transform:translateX(0);
+                }
+                50% {
+                    transform:translateX(200px);
+                }
+                100% {
+                    transform:translateX(0);
+                }
+            }
+            .ball{
+                width:50px;
+                height:50px;
+                background-color: red;
+                border-radius:50%;
+                animation:move 2s ease-in-out infinite;
+            }
+            /*part3 Exercise 12*/
+            @keyframes bounce {
+                0%, 100% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(-20px);
+                }
+            }
+            p{
+                font-size:24px;
+                font-weight:600;
+                animation:bounce 1s ease-in-out infinite;
+            }
+            /*part3 Exercise 13*/
+            .traffic-light{
+                width:60px;
+                background-color: black;
+                padding:10px;
+                border-radius:10px;
+                display:flex;
+                flex-direction:column;
+                gap:10px;
+            }
+            .light{
+                width:40px;
+                height:40px;
+                border-radius:50%;
+                background-color:gray;
+            }
+            .light.red{
+                animation: redLight 6s infinite;
+            }
+            .light.yellow{
+                animation: yellowLight 6s infinite;
+            }
+            .light.green{
+                animation: greenLight 6s infinite;
+            }
+            @keyframes redLight {
+                0%,33.333% {
+                    background-color: red;
+                }
+                33.334%,100% {
+                    background-color: gray;
+                }
+            }
+            @keyframes yellowLight {
+                0%,33.333% {
+                    background-color: gray;
+                }
+                33.334%,66.666% {
+                    background-color: yellow;
+                }
+                66.667%,100% {
+                    background-color: gray;
+                }
+            }
+            @keyframes greenLight {
+                0%,66.666% {
+                    background-color: gray;
+                }
+                66.667%,100% {
+                    background-color: green;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="loader">
+        </div>
+        <hr>
+        <div class="ball"></div>
+        <hr>
+        <p>Welcome</p>
+        <hr>
+        <div class="traffic-light">
+            <div class="light red"></div>
+            <div class="light yellow"></div>
+            <div class="light green"></div>
+        </div>
+    </body>
+</html>
