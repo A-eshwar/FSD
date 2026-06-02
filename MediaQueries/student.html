@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Students Management Dashboard</title>
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                color: #333;
+            }
+            .layout{
+                display: flex;
+                min-height: 100px;
+            }
+            .sidebar{
+                width: 250px;
+                background-color: #2c3e50;
+                color: white;
+                padding: 20px;
+            }
+            .sidebar h3{
+                margin-top: 0;
+            }
+            .sidebar nav a{
+                display: block;
+                color: white;
+                text-decoration: none;
+                margin: 10px 0;
+            }
+            .sidebar nav a:hover{
+                text-decoration: underline;
+            }
+            .content {
+                flex-grow: 1;
+                padding: 20px;
+            }
+            .cards {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 20px;
+            }
+            .card {
+                background-color: white;
+                border-radius: 8px;
+                padding: 16px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            @media (max-width:480px) {
+                .layout {
+                    flex-direction: column;
+                }
+                .sidebar {
+                    display: none;
+                }
+                .content {
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1 style="margin:0;font-size:24px;text-align:center">Students Management Dashboard</h1>
+        </header>
+        <div class="layout">
+            <aside class="sidebar">
+                <h3 style="margin-top:0">Menu</h3>
+                <nav>
+                    <a href="#">Overview</a>
+                    <a href="#">Students</a>
+                    <a href="#">Courses</a>
+                    <a href="#">Settings</a>
+                </nav>
+            </aside>
+            <main class="content">
+                <h2>Students</h2>
+                <div class="cards">
+                    <div class="card">
+                        <strong>Jane Doe</strong>
+                        <div>Grade: 10</div>
+                        <div>Status: Active</div>
+                    </div>
+                    <div class="card">
+                        <strong>John Smith</strong>
+                        <div>Grade: 12</div>
+                        <div>Status: Active</div>
+                    </div>
+                    <div class="card">
+                        <strong>Maria Garcia</strong>
+                        <div>Grade: 11</div>
+                        <div>Status: Inactive</div>
+                    </div>
+                    <div class="card">
+                        <strong>Ahmed Khan</strong>
+                        <div>Grade: 9</div>
+                        <div>Status: Active</div>
+                    </div>
+                    <div class="card">
+                        <strong>Sofia Patel</strong>
+                        <div>Grade: 12</div>
+                        <div>Status: Active</div>
+                    </div>
+                    <div class="card">
+                        <strong>Lucas Brown</strong>
+                        <div>Grade: 10</div>
+                        <div>Status: Active</div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>
