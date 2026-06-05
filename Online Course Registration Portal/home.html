@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduExcel Technical Training Institute</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+        .navbar-dark-custom {
+            background-color: #8B4513;
+        }
+        .navbar-nav .nav-link {
+            color: rgba(255, 255, 255, 0.85) !important;
+            font-weight: 500;
+        }
+        .navbar-nav .nav-link.active, .navbar-nav .nav-link:hover {
+            color: #fff !important;
+            text-decoration: underline;
+            text-underline-offset: 6px;
+        }
+        .hero-banner {
+            position: relative;
+            color: white;
+            padding: 120px 20px;
+            overflow: hidden;
+        }
+        .hero-bg-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.75);
+            z-index: 2;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 3;
+        }
+        .course-card, .faculty-card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            background-color: #fff;
+            overflow: hidden;
+        }
+        .course-card:hover, .faculty-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+        }
+        .card-img-container {
+            width: 100%;
+            height: 200px;
+            background-color: #e9ecef;
+        }
+        .card-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .testimonial-carousel {
+            background-color: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        .map-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            background-color: #e0e0e0;
+        }
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        footer {
+            background-color: #8B4513;
+            color: white;
+            padding: 50px 20px 20px;
+            margin-top: 80px;
+        }
+        footer a {
+            color: #ddd;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-dark-custom sticky-top py-3 shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold fs-4" href="#view-home" data-bs-toggle="tab">
+                <span class="bg-white text-dark rounded-circle px-2 py-1 fs-5">EE</span> EduExcel
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto gap-1 gap-lg-3 text-center text-lg-start mt-3 mt-lg-0" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" href="#view-home" role="tab">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="nav-courses-tab" data-bs-toggle="tab" href="#view-courses" role="tab">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="nav-reg-tab" data-bs-toggle="tab" href="#view-reg" role="tab">Register Now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="nav-about-tab" data-bs-toggle="tab" href="#view-about" role="tab">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" href="#view-contact" role="tab">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-light text-dark px-3 ms-lg-2 mt-2 mt-lg-0 fw-semibold shadow-sm" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="min-vh-100 tab-content">
+
+        <div id="view-home" class="tab-pane fade show active" role="tabpanel">
+            <section class="hero-banner text-center shadow-sm">
+                <div class="hero-overlay"></div>
+                <div class="container py-4 hero-content">
+                    <h1 class="display-3 fw-bold mb-3">EduExcel Technical Training Institute</h1>
+                    <p class="lead fs-3 mb-4 opacity-90">Empowering Minds, Shaping Digital Futures.</p>
+                    <p class="mx-auto mb-5 fs-5 text-center" style="max-width: 700px;">Join thousands of industry professionals specializing in modern software design engineering, advanced analytics frameworks, and direct-to-market cloud operational skills.</p>
+                    <a class="btn btn-light btn-lg px-5 py-3 fw-bold shadow-sm" style="color: #8B4513;" href="#view-courses" data-bs-toggle="tab" onclick="document.getElementById('nav-courses-tab').click()">Explore Courses</a>
+                </div>
+            </section>
+
+            <section class="container my-5 py-4">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold fs-1" style="color: #8B4513;">Featured Career Paths</h2>
+                    <p class="text-muted">Accelerated premium tracking pipelines engineered for placement success.</p>
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <div class="col">
+                        <div class="card h-100 course-card">
+                            <div class="card-img-container">
+                                <img src="fsd.png" alt="Full Stack Web Development">
+                            </div>
+                            <div class="card-body d-flex flex-column justify-content-between p-4">
+                                <div>
+                                    <h4 class="card-title fw-bold fs-5 mb-3" style="color: #8B4513;">Full Stack Web Development</h4>
+                                    <p class="card-text text-secondary mb-1"><strong>Duration:</strong> 6 Months</p>
+                                    <p class="card-text text-secondary mb-3"><strong>Course Fee:</strong> <span class="text-dark fw-bold">₹45,000</span></p>
+                                </div>
+                                <a class="btn text-white w-100 mt-2 fw-semibold" style="background-color: #8B4513;" href="#view-reg" data-bs-toggle="tab" onclick="document.getElementById('nav-reg-tab').click(); document.getElementById('regCourse').value='WebDev'">View Details & Register</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 course-card">
+                            <div class="card-img-container">
+                                <img src="python.jpg" alt="Python Programming">
+                            </div>
+                            <div class="card-body d-flex flex-column justify-content-between p-4">
+                                <div>
+                                    <h4 class="card-title fw-bold fs-5 mb-3" style="color: #8B4513;">Python Programming & Core Architectures</h4>
+                                    <p class="card-text text-secondary mb-1"><strong>Duration:</strong> 3 Months</p>
+                                    <p class="card-text text-secondary mb-3"><strong>Course Fee:</strong> <span class="text-dark fw-bold">₹25,000</span></p>
+                                </div>
+                                <a class="btn text-white w-100 mt-2 fw-semibold" style="background-color: #8B4513;" href="#view-reg" data-bs-toggle="tab" onclick="document.getElementById('nav-reg-tab').click(); document.getElementById('regCourse').value='Python'">View Details & Register</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 course-card">
+                            <div class="card-img-container">
+                                <img src="data science.jpg" alt="Data Science">
+                            </div>
+                            <div class="card-body d-flex flex-column justify-content-between p-4">
+                                <div>
+                                    <h4 class="card-title fw-bold fs-5 mb-3" style="color: #8B4513;">Data Science & Statistical Modeling</h4>
+                                    <p class="card-text text-secondary mb-1"><strong>Duration:</strong> 6 Months</p>
+                                    <p class="card-text text-secondary mb-3"><strong>Course Fee:</strong> <span class="text-dark fw-bold">₹55,000</span></p>
+                                </div>
+                                <a class="btn text-white w-100 mt-2 fw-semibold" style="background-color: #8B4513;" href="#view-reg" data-bs-toggle="tab" onclick="document.getElementById('nav-reg-tab').click(); document.getElementById('regCourse').value='DataScience'">View Details & Register</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="container my-5 py-4">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold fs-1" style="color: #8B4513;">Alumni Success Stories</h2>
+                </div>
+                <div id="testimonialSlider" class="carousel slide testimonial-carousel p-4 p-md-5 mx-auto" data-bs-ride="carousel" style="max-width: 850px;">
+                    <div class="carousel-inner text-center">
+                        <div class="carousel-item active">
+                            <p class="fs-4 text-secondary italic">"The Web Development path took me from total novice status to landing a full-stack engineer role within six months. The labs are structured beautifully around modern realities."</p>
+                            <h5 class="fw-bold mt-4 mb-0" style="color: #8B4513;">Rohan Malhotra</h5>
+                            <small class="text-muted">Software Engineer at Oracle</small>
+                        </div>
+                        <div class="carousel-item">
+                            <p class="fs-4 text-secondary italic">"Transitioning into analytics required absolute mastery over math constructs. The Cloud Data Architecture modules here gave me hands-on sandboxes that made all the difference."</p>
+                            <h5 class="fw-bold mt-4 mb-0" style="color: #8B4513;">Deepika Reddy</h5>
+                            <small class="text-muted">Lead Data Analyst at Deloitte</small>
+                        </div>
+                        <div class="carousel-item">
+                            <p class="fs-4 text-secondary italic">"The ML Ops framework coverage here is unparalleled. Instructors actively work inside tier-1 corporate systems, bringing raw structural insights straight to production."</p>
+                            <h5 class="fw-bold mt-4 mb-0" style="color: #8B4513;">Ankit Sharma</h5>
+                            <small class="text-muted">AI Engineer at Microsoft</small>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialSlider" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#testimonialSlider" data-bs-slide="next">
+                        <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </section>
+        </div>
+
+        <div id="view-courses" class="tab-pane fade" role="tabpanel">
+            <section class="container my-5 py-4">
+                <div class="text-center mb-5">
+                    <h1 class="fw-bold display-4" style="color: #8B4513;">Complete Course Catalog</h1>
+                    <p class="text-muted fs-5">All program trajectories include specialized placement counseling tracks.</p>
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <div class="col">
+                        <div class="card h-100 course-card">
+                            <div class="card-img-container">
+                                <img src="fsd.png" alt="Full Stack Web Development">
+                            </div>
+                            <div class="card-body d-flex flex-column justify-content-between p-4">
+                                <div>
+                                    <h4 class="card-title fw-bold fs-5 mb-3" style="color: #8B4513;">Full Stack Web Development</h4>
+                                    <p class="card-text text-secondary mb-1"><strong>Duration:</strong> 6 Months</p>
+                                    <p class="card-text text-secondary mb-3"><strong>Course Fee:</strong> <span class="text-dark fw-bold">₹45,000</span></p>
+                                </div>
+                                <a class="btn text-white w-100 mt-2 fw-semibold" style="background-color: #8B4513;" href="#view-reg" data-bs-toggle="tab" onclick="document.getElementById('nav-reg-tab').click(); document.getElementById('regCourse').value='WebDev'">View Details & Register</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 course-card">
+                            <div class="card-img-container">
+                                <img src="python.jpg" alt="Python Programming">
+                            </div>
+                            <div class="card-body d-flex flex-column justify-content-between p-4">
+                                <div>
+                                    <h4 class="card-title fw-bold fs-5 mb-3" style="color: #8B4513;">Python Programming & Core Architectures</h4>
+                                    <p class="card-text text-secondary mb-1"><strong>Duration:</strong> 3 Months</p>
+                                    <p class="card-text text-secondary mb-3"><strong>Course Fee:</strong> <span class="text-dark fw-bold">₹25,000</span></p>
+                                </div>
+                                <a class="btn text-white w-100 mt-2 fw-semibold" style="background-color: #8B4513;" href="#view-reg" data-bs-toggle="tab" onclick="document.getElementById('nav-reg-tab').click(); document.getElementById('regCourse').value='Python'">View Details & Register</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 course-card">
+                            <div class="card-img-container">
+                                <img src="data science.jpg" alt="Data Science">
+                            </div>
+                            <div class="card-body d-flex flex-column justify-content-between p-4">
+                                <div>
+                                    <h4 class="card-title fw-bold fs-5 mb-3" style="color: #8B4513;">Data Science & Statistical Modeling</h4>
+                                    <p class="card-text text-secondary mb-1"><strong>Duration:</strong> 6 Months</p>
+                                    <p class="card-text text-secondary mb-3"><strong>Course Fee:</strong> <span class="text-dark fw-bold">₹55,000</span></p>
+                                </div>
+                                <a class="btn text-white w-100 mt-2 fw-semibold" style="background-color: #8B4513;" href="#view-reg" data-bs-toggle="tab" onclick="document.getElementById('nav-reg-tab').click(); document.getElementById('regCourse').value='DataScience'">View Details & Register</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 course-card">
+                            <div class="card-img-container">
+                                <img src="advanced.jpg" alt="Artificial Intelligence">
+                            </div>
+                            <div class="card-body d-flex flex-column justify-content-between p-4">
+                                <div>
+                                    <h4 class="card-title fw-bold fs-5 mb-3" style="color: #8B4513;">Advanced AI & Machine Learning Systems</h4>
+                                    <p class="card-text text-secondary mb-1"><strong>Duration:</strong> 8 Months</p>
+                                    <p class="card-text text-secondary mb-3"><strong>Course Fee:</strong> <span class="text-dark fw-bold">₹75,000</span></p>
+                                </div>
+                                <a class="btn text-white w-100 mt-2 fw-semibold" style="background-color: #8B4513;" href="#view-reg" data-bs-toggle="tab" onclick="document.getElementById('nav-reg-tab').click(); document.getElementById('regCourse').value='AI_ML'">View Details & Register</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 course-card">
+                            <div class="card-img-container">
+                                <img src="ejava.png" alt="Java Engineering">
+                            </div>
+                            <div class="card-body d-flex flex-column justify-content-between p-4">
+                                <div>
+                                    <h4 class="card-title fw-bold fs-5 mb-3" style="color: #8B4513;">Enterprise Java Framework Engineering</h4>
+                                    <p class="card-text text-secondary mb-1"><strong>Duration:</strong> 4 Months</p>
+                                    <p class="card-text text-secondary mb-3"><strong>Course Fee:</strong> <span class="text-dark fw-bold">₹35,000</span></p>
+                                </div>
+                                <a class="btn text-white w-100 mt-2 fw-semibold" style="background-color: #8B4513;" href="#view-reg" data-bs-toggle="tab" onclick="document.getElementById('nav-reg-tab').click(); document.getElementById('regCourse').value='Java'">View Details & Register</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 course-card">
+                            <div class="card-img-container">
+                                <img src="cloud.jpg" alt="Cloud Systems">
+                            </div>
+                            <div class="card-body d-flex flex-column justify-content-between p-4">
+                                <div>
+                                    <h4 class="card-title fw-bold fs-5 mb-3" style="color: #8B4513;">Cloud Systems & DevOps Administration</h4>
+                                    <p class="card-text text-secondary mb-1"><strong>Duration:</strong> 4 Months</p>
+                                    <p class="card-text text-secondary mb-3"><strong>Course Fee:</strong> <span class="text-dark fw-bold">₹40,000</span></p>
+                                </div>
+                                <a class="btn text-white w-100 mt-2 fw-semibold" style="background-color: #8B4513;" href="#view-reg" data-bs-toggle="tab" onclick="document.getElementById('nav-reg-tab').click(); document.getElementById('regCourse').value='Cloud'">View Details & Register</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="view-reg" class="tab-pane fade" role="tabpanel">
+            <section class="container my-5 py-4">
+                <div class="card border-0 shadow-lg p-4 p-md-5 mx-auto rounded-4 bg-white" style="max-width: 800px;">
+                    <div class="text-center mb-4">
+                        <h2 class="fw-bold display-5" style="color: #8B4513;">Admission Registration</h2>
+                        <p class="text-muted">Fill out your profile credentials below to instantly lock in tuition pricing options.</p>
+                    </div>
+
+                    <form id="registrationForm" onsubmit="this.querySelector('.alert').classList.remove('d-none'); return false;">
+                        <div id="regSuccessAlert" class="alert alert-success alert-dismissible fade show d-none p-4" role="alert">
+                            <h4 class="alert-heading fw-bold">Application Received Successfully!</h4>
+                            <p class="m-0">Your profile documentation token has been registered. An administrative enrollment officer will schedule your technical checkpoint interview within 24 operational hours via email/phone.</p>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="regName" class="form-label fw-semibold">Student Full Name</label>
+                                <input type="text" class="form-control py-2" id="regName" required placeholder="John Doe">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="regEmail" class="form-label fw-semibold">Primary Email Address</label>
+                                <input type="email" class="form-control py-2" id="regEmail" required placeholder="johndoe@example.com">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="regMobile" class="form-label fw-semibold">Mobile Number</label>
+                                <input type="tel" class="form-control py-2" id="regMobile" required placeholder="+91 XXXXX XXXXX">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="regGender" class="form-label fw-semibold">Gender Identity</label>
+                                <select class="form-select py-2" id="regGender" required>
+                                    <option value="" disabled selected>Select Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="regCourse" class="form-label fw-semibold">Desired Specialization Track</label>
+                                <select class="form-select py-2" id="regCourse" required>
+                                    <option value="" disabled selected>Select Track</option>
+                                    <option value="WebDev">Full Stack Web Development</option>
+                                    <option value="Python">Python Core & Systems Architecture</option>
+                                    <option value="DataScience">Data Science & Statistical Modeling</option>
+                                    <option value="AI_ML">Advanced AI & Machine Learning Systems</option>
+                                    <option value="Java">Enterprise Java Framework Engineering</option>
+                                    <option value="Cloud">Cloud Systems & DevOps Administration</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="regQual" class="form-label fw-semibold">Highest Educational Qualification</label>
+                                <select class="form-select py-2" id="regQual" required>
+                                    <option value="" disabled selected>Select Degree</option>
+                                    <option value="BTech">B.Tech / B.E.</option>
+                                    <option value="BSc_BCA">B.Sc / BCA</option>
+                                    <option value="MTech_MCA">M.Tech / MCA</option>
+                                    <option value="Other">Undergraduate / Other</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="regAddress" class="form-label fw-semibold">Permanent Mailing Address</label>
+                                <textarea class="form-control" id="regAddress" rows="3" required placeholder="Street address, City, State, Zip Code"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <label for="regResume" class="form-label fw-semibold">Upload Professional Resume (PDF Format Only)</label>
+                                <input type="file" class="form-control" id="regResume" accept=".pdf" required>
+                                <small class="text-muted d-block mt-1">Maximum allowed payload limit profile size configuration: 5MB</small>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="regTerms" required>
+                                    <label class="form-check-label text-secondary small" for="regTerms">
+                                        I hereby certify that all explicit data nodes supplied above are complete and factual. I agree to comply with all enrollment protocol standards and terms of honor codes.
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <button type="submit" class="btn text-white w-100 py-3 fw-bold fs-5 shadow-sm" style="background-color: #8B4513;">Complete Application Submission</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+
+        <div id="view-about" class="tab-pane fade" role="tabpanel">
+            <section class="container my-5 py-4">
+                <div class="text-center mb-5">
+                    <h1 class="fw-bold display-4" style="color: #8B4513;">Institutional Ecosystem</h1>
+                    <p class="text-muted">Pioneering standard architectures in expert industrial training domains.</p>
+                </div>
+
+                <div class="row g-4 mb-5">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 bg-white p-4 rounded-3 shadow-sm text-center">
+                            <h3 class="fw-bold h4 mb-3" style="color: #8B4513;">Our History</h3>
+                            <p class="text-secondary m-0 text-start">Founded with a clear vision to bridge academic deficits, EduExcel has successfully curated specialized upskilling pipelines for over five consecutive computational calendar periods, aligning modern career professionals with immediate algorithmic production expectations.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 bg-white p-4 rounded-3 shadow-sm text-center">
+                            <h3 class="fw-bold h4 mb-3" style="color: #8B4513;">Our Vision</h3>
+                            <p class="text-secondary m-0 text-start">To democratize elite, hands-on, enterprise-grade engineering pathways, empowering technical thinkers from any background to transition effortlessly into Tier-1 product ecosystem infrastructures world-wide.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 bg-white p-4 rounded-3 shadow-sm text-center">
+                            <h3 class="fw-bold h4 mb-3" style="color: #8B4513;">Our Mission</h3>
+                            <p class="text-secondary m-0 text-start">To systematically deconstruct complex engineering paradigms into rigorous, practical lab modules. We combine real-time project compilation with dedicated mentorship to cultivate continuous professional excellence.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="fw-bold fs-2 text-center my-5" style="color: #8B4513;">Distinguished Faculty Panel</h2>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                    <div class="col">
+                        <div class="card h-100 faculty-card">
+                            <div class="card-img-container">
+                                <img src="fac1.jpg" alt="Dr. John Doe">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold m-0">John Doe</h5>
+                                <small class="text-muted d-block mb-2">Ex-Principal Scientist, AI Labs</small>
+                                <p class="card-text text-secondary small">Specializes in neural parsing, reinforcement loops, and predictive compute algorithms.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 faculty-card">
+                            <div class="card-img-container">
+                                <img src="fac4.jpg" alt="Prof. Alice">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold m-0">Alice</h5>
+                                <small class="text-muted d-block mb-2">Ex-Principal Architect, AWS</small>
+                                <p class="card-text text-secondary small">Expert in large scale fault-tolerant cloud engineering and distributed cluster setups.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 faculty-card">
+                            <div class="card-img-container">
+                                <img src="fac3.jpg" alt="Bob Smith">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold m-0">Bob Smith</h5>
+                                <small class="text-muted d-block mb-2">Full-Stack Consultant</small>
+                                <p class="card-text text-secondary small">Directing structural reactive framework architectures and real-time scaling protocols.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 faculty-card">
+                            <div class="card-img-container">
+                                <img src="fac2.jpg" alt="Prof. King">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold m-0">King</h5>
+                                <small class="text-muted d-block mb-2">Data Infrastructure Architect</small>
+                                <p class="card-text text-secondary small">Specializes in transactional ledger design systems, high-velocity pipelines, and analytics optimization.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="view-contact" class="tab-pane fade" role="tabpanel">
+            <section class="container my-5 py-4">
+                <div class="text-center mb-5">
+                    <h1 class="fw-bold display-4" style="color: #8B4513;">Connect Globally</h1>
+                    <p class="text-muted">Our centralized hub lines are open for institutional and individual scheduling inquiries.</p>
+                </div>
+
+                <div class="row g-5">
+                    <div class="col-lg-6">
+                        <div class="card border-0 bg-white p-4 p-sm-5 rounded-4 shadow-sm">
+                            <h3 class="fw-bold mb-4" style="color: #8B4513;">Inquiry Submission</h3>
+                            
+                            <form id="contactForm" onsubmit="this.querySelector('.alert').classList.remove('d-none'); return false;">
+                                <div id="contactSuccessAlert" class="alert alert-success alert-dismissible fade show d-none" role="alert">
+                                    <strong>Message Synced!</strong> Our ticketing logs recorded your profile query correctly.
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="ctName" class="form-label fw-medium">Your Name</label>
+                                    <input type="text" class="form-control py-2" id="ctName" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="ctEmail" class="form-label fw-medium">Email Address</label>
+                                    <input type="email" class="form-control py-2" id="ctEmail" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="ctSubject" class="form-label fw-medium">Subject Topic</label>
+                                    <input type="text" class="form-control py-2" id="ctSubject" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="ctMessage" class="form-label fw-medium">Detailed Request Context</label>
+                                    <textarea class="form-control" id="ctMessage" rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="btn text-white w-100 py-2 fw-semibold" style="background-color: #8B4513;">Dispatch Communication Token</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 d-flex flex-column justify-content-between">
+                        <div class="card border-0 bg-white p-4 rounded-4 shadow-sm mb-4">
+                            <h4 class="fw-bold mb-3" style="color: #8B4513;">Campus Headquarters</h4>
+                            <p class="text-secondary mb-2"><strong>Location Node:</strong> Vastunagar Innovation Park, Block C, Hyderabad, Telangana, India 501510</p>
+                            <p class="text-secondary mb-2"><strong>Central Line:</strong> +91 040 6616 0100</p>
+                            <p class="text-secondary mb-0"><strong>Inbound Logs:</strong> admissions@eduexcelinstitute.edu</p>
+                        </div>
+                        
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3811.4326588256333!2d78.5973715!3d17.221712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcba167dfa81cd7%3A0x7d0bf1d63dd8ef6a!2sCVR%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1717612345678!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-3">EduExcel Institute</h5>
+                    <p class="small text-white-50">Providing technical knowledge architectures engineered to match continuous enterprise operational transformations.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-3">Follow Matrix Channels</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#">Facebook</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">LinkedIn</a>
+                        <a href="#">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <hr style="border-color: rgba(255,255,255,0.15); margin: 30px 0;">
+            <div class="text-center text-white-50 small">
+                <p class="m-0">© 2026 EduExcel Technical Training Institute. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0 p-3">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold fs-3" id="loginModalLabel" style="color: #8B4513;">Login</h5>
+                    <button type="button" class="btn-close" data-bs-toggle="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="modalLoginForm" onsubmit="bootstrap.Modal.getInstance(document.getElementById('loginModal')).hide(); alert('Authenticated successfully!'); return false;">
+                        <div class="mb-3">
+                            <label for="mEmail" class="form-label fw-medium">Email Address</label>
+                            <input type="email" class="form-control py-2" id="mEmail" required placeholder="name@example.com">
+                        </div>
+                        <div class="mb-4">
+                            <label for="mPassword" class="form-label fw-medium">Secret Security Password</label>
+                            <input type="password" class="form-control py-2" id="mPassword" required placeholder="••••••••">
+                        </div>
+                        <button type="submit" class="btn text-white w-100 py-2 fw-semibold shadow-sm" style="background-color: #8B4513;">Verify & Authenticate Profile</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

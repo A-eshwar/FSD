@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CVR College of Engineering</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar-nav .nav-link {
+            color: white !important;
+        }
+        .navbar-nav .nav-link.disabled {
+            color: rgba(255, 255, 255, 0.5) !important;
+        }
+        .dropdown-menu a.dropdown-item {
+            color: black !important;
+        }
+        .dropdown-menu a.dropdown-item:hover {
+            background-color: #f8f9fa;
+        }
+        #greet {
+            background-color: antiquewhite;
+            max-width: 800px;
+            width: 100%;
+            padding: 20px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border: 1px solid #e3d2bd;
+        }
+        .card-hover {
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        .card-border {
+            border: 1px solid rgba(0,0,0,0.08);
+        }
+        footer {
+            background-color: brown;
+            color: white;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.25s ease;
+        }
+        footer a:hover {
+            color: #f0f0f0;
+        }
+        .social-links a {
+            font-size: 1.5rem;
+            margin-right: 20px;
+            display: inline-block;
+        }
+        .footer-section {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: brown;">
+        <div class="container-fluid d-flex flex-column">
+            <div class="d-flex align-items-center justify-content-center w-100 position-relative mb-3">
+                <img src="logo.webp" width="100" height="100" alt="Logo" class="me-3">
+                <h1 class="text-white m-0 fs-3 text-center">CVR COLLEGE OF ENGINEERING</h1>
+            </div>
+            <button class="navbar-toggler ms-auto bg-light mb-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse w-100" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center gap-2 gap-lg-4">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reg.html">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container my-5">
+        <h2 class="text-center mb-5" style="color: #8B4513; font-weight: 700;">Contact Us</h2>
+        
+        <div class="row row-cols-1 row-cols-lg-2 g-4 mb-5">
+            <div class="col">
+                <div class="card h-100 card-hover card-border">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #8B4513;">Campus</h5>
+                        <p class="card-text mb-3">
+                            <strong>CVR College Of Engineering,</strong><br>
+                            Vastunagar, Mangalpalli (V),<br>
+                            Ibrahimpatnam (M),<br>
+                            Rangareddy (D), Telangana 501 510
+                        </p>
+                        <p class="mb-2">
+                            <a href="https://goo.gl/maps/bSaeRR7qZH72" target="_blank" style="color: #8B4513; text-decoration: none;">
+                                <strong>Google Maps Location</strong>
+                            </a>
+                        </p>
+                        <p class="mb-1">
+                            <strong>Phone:</strong> <a href="tel:08414661601" style="color: #8B4513; text-decoration: none;">08414 661 601</a>
+                        </p>
+                        <p>
+                            <strong>EAMCET Code:</strong> CVRH
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card h-100 card-hover card-border">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: #8B4513;">City Office</h5>
+                        <p class="card-text mb-3">
+                            <strong>#201 & 202, Ashoka Scintilla,</strong><br>
+                            above Mebaz and opp. Malabar Gold & Diamonds,<br>
+                            Himayat Nagar,<br>
+                            Hyderabad, Telangana 500 029
+                        </p>
+                        <p class="mb-2">
+                            <a href="https://goo.gl/maps/homzENdMJ1N2" target="_blank" style="color: #8B4513; text-decoration: none;">
+                                <strong>Google Maps Location</strong>
+                            </a>
+                        </p>
+                        <p class="mb-1">
+                            <strong>Mobile:</strong> <a href="tel:09959834090" style="color: #8B4513; text-decoration: none;">099598 34090</a>
+                            <br><small>(NOT for placements. Placements: <a href="tel:08414661663" style="color: #8B4513;">08414 661663</a>)</small>
+                        </p>
+                        <p>
+                            <strong>Landline:</strong> 
+                            <a href="tel:+918414661602" style="color: #8B4513; text-decoration: none;">+91 84146 61602</a>,
+                            <a href="tel:08414661601" style="color: #8B4513; text-decoration: none;">084146 61601</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card card-hover card-border mb-5">
+            <div class="card-body">
+                <h5 class="card-title" style="color: #8B4513;">Email Addresses</h5>
+                <div class="row row-cols-1 row-cols-md-2 g-3">
+                    <div class="col">
+                        <p class="mb-2">
+                            <strong>General Enquiries:</strong><br>
+                            <a href="mailto:principal@cvr.ac.in" style="color: #8B4513; text-decoration: none;">principal@cvr.ac.in</a>
+                        </p>
+                    </div>
+                    <div class="col">
+                        <p class="mb-2">
+                            <strong>Admissions Related:</strong><br>
+                            <a href="mailto:snreddy@cvr.ac.in" style="color: #8B4513; text-decoration: none;">snreddy@cvr.ac.in</a>
+                        </p>
+                    </div>
+                    <div class="col">
+                        <p class="mb-2">
+                            <strong>Placements Related:</strong><br>
+                            <a href="mailto:placement@cvr.ac.in" style="color: #8B4513; text-decoration: none;">placement@cvr.ac.in</a>
+                        </p>
+                    </div>
+                    <div class="col">
+                        <p class="mb-0">
+                            <strong>Web Related Queries:</strong><br>
+                            <a href="mailto:web@cvr.ac.in" style="color: #8B4513; text-decoration: none;">web@cvr.ac.in</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-section">
+                    <h6 style="font-weight: 700; margin-bottom: 15px;">CVR College of Engineering</h6>
+                    <p>Vastunagar, Mangalpalli (V), Ibrahimpatnam (M), Rangareddy (D), Telangana 501 510</p>
+                    <p><a href="tel:08414661601">08414 661 601</a></p>
+                </div>
+                <div class="col-md-4 footer-section">
+                    <h6 style="font-weight: 700; margin-bottom: 15px;">Quick Links</h6>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="reg.html">Register</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 footer-section">
+                    <h6 style="font-weight: 700; margin-bottom: 15px;">Follow Us</h6>
+                    <div class="social-links">
+                        <a href="#" title="Facebook">f</a>
+                        <a href="#" title="Twitter">𝕏</a>
+                        <a href="#" title="LinkedIn">in</a>
+                        <a href="#" title="Instagram">📷</a>
+                    </div>
+                </div>
+            </div>
+            <hr style="border-color: rgba(255,255,255,0.2); margin: 30px 0;">
+            <div class="text-center">
+                <p style="margin: 0;">&copy; 2024 CVR College of Engineering. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
