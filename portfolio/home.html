@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eshwar - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        section {
+            scroll-margin-top: 60px;
+            padding: 60px 0;
+        }
+        #home {
+            min-height: calc(100vh - 60px); 
+            display: flex;
+            align-items: center;
+        }
+        .profile-img {
+            max-width: 350px;
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+        }
+        @media (min-width: 992px) {
+            .profile-img {
+                max-width: 420px;
+            }
+        }
+        .progress {
+            height: 25px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm py-2" style="background-color:blue;">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold fs-4 m-0" href="#home">PORTFOLIO</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center gap-2 gap-lg-3">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="home" class="bg-light">
+        <div class="container">
+            <div class="row align-items-center justify-content-center flex-column-reverse flex-md-row text-center text-md-start">
+                <div class="col-md-6 col-lg-5 mt-5 mt-md-0 pe-lg-4">
+                    <h1 class="display-4 fw-bold text-dark">
+                        Hi, I'm <span style="color: blue;">Eshwar</span>
+                    </h1>
+                    <h3 class="text-secondary mb-4">Aspiring Software Engineer</h3>
+                    <p class="lead mb-4 text-muted">
+                        A passionate learner dedicated to building scalable solutions and eager to solve real-world problems through innovative technology.
+                    </p>
+                    <a href="" download="Eshwar_Resume.pdf" class="btn btn-primary btn-lg shadow-sm px-4 py-2 me-2" style="background-color: blue; border: none;">
+                        Download Resume
+                    </a>
+                    <button type="button" class="btn btn-outline-dark btn-lg shadow-sm px-4 py-2" data-bs-toggle="modal" data-bs-target="#welcomeModal">
+                        Quick Intro
+                    </button>
+                </div>
+                <div class="col-md-6 col-lg-5 offset-lg-1 text-center mb-4 mb-md-0">
+                    <img src="data:image/png;base64,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" alt="Profile Photo" class="img-fluid rounded-circle shadow-lg border border-4 border-white profile-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="bg-white">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5" style="color: blue;">About Me</h2>
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h4 class="fw-bold">Career Objective</h4>
+                    <p class="fs-5 text-muted px-md-5">
+                        To secure a challenging position in a reputable organization to expand my learnings, knowledge, and skills. Secure a responsible career opportunity to fully utilize my training and skills, while making a significant contribution to the success of the company.
+                    </p>
+                </div>
+            </div>
+            <div class="row gap-4 justify-content-center">
+                <div class="col-md-5">
+                    <div class="card shadow-sm h-100 border-0 bg-light">
+                        <div class="card-body p-4">
+                            <h4 class="card-title fw-bold mb-4">Educational Details</h4>
+                            <ul class="list-group list-group-flush bg-transparent">
+                                <li class="list-group-item bg-transparent border-bottom">
+                                    <strong>Bachelor of Technology</strong><br>
+                                    <span class="text-muted">CVR College Of Engineering Computer Science Engineering | 2023 - 2027</span>
+                                </li>
+                                <li class="list-group-item bg-transparent border-bottom">
+                                    <strong>Higher Secondary Education</strong><br>
+                                    <span class="text-muted">XYZ Junior College | 2021 - 2023</span>
+                                </li>
+                                <li class="list-group-item bg-transparent">
+                                    <strong>Secondary Education</strong><br>
+                                    <span class="text-muted">Sri Chaitanya | 2021</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="card shadow-sm h-100 border-0 bg-light">
+                        <div class="card-body p-4">
+                            <h4 class="card-title fw-bold mb-4">Personal Interests</h4>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge bg-primary fs-6 p-2">Open Source Contributing</span>
+                                <span class="badge bg-secondary fs-6 p-2">Algorithm Puzzles</span>
+                                <span class="badge bg-success fs-6 p-2">Cricket</span>
+                                <span class="badge bg-info text-dark fs-6 p-2">Chess</span>
+                                <span class="badge bg-dark fs-6 p-2">Photography</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="bg-light">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5" style="color: blue;">Skills</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card shadow p-4 border-0">
+                        <div class="card-body">
+                            <h4 class="fw-bold mb-4 text-center">Skill Proficiency</h4>
+                            
+                            <p class="mb-1 fw-bold">HTML</p>
+                            <div class="progress mb-4">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                            </div>
+                            <p class="mb-1 fw-bold">CSS</p>
+                            <div class="progress mb-4">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                            </div>
+                            <p class="mb-1 fw-bold">Bootstrap</p>
+                            <div class="progress mb-4">
+                                <div class="progress-bar bg-info text-dark" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                            </div>
+                            <p class="mb-1 fw-bold">JavaScript</p>
+                            <div class="progress mb-2">
+                                <div class="progress-bar bg-warning text-dark" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="bg-white">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5" style="color: blue;">Projects</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card shadow-sm h-100 border-0 bg-light">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h4 class="card-title fw-bold">Select Your Companion</h4>
+                            <p class="card-text text-muted flex-grow-1">A fully responsive pet card layout designed through html and css</p>
+                            <div class="mb-3">
+                                <span class="badge bg-dark">HTML</span>
+                                <span class="badge bg-dark">CSS</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary mt-auto">GitHub Link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card shadow-sm h-100 border-0 bg-light">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h4 class="card-title fw-bold">Mini Game Station</h4>
+                            <p class="card-text text-muted flex-grow-1">An interactive web game platform implemented differnt mini games which create fun</p>
+                            <div class="mb-3">
+                                <span class="badge bg-dark">HTML</span>
+                                <span class="badge bg-dark">CSS</span>
+                                <span class="badge bg-dark">FIREBASE</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary mt-auto">GitHub Link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card shadow-sm h-100 border-0 bg-light">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h4 class="card-title fw-bold">Budegt Tracker</h4>
+                            <p class="card-text text-muted flex-grow-1">A personal expense tracking system which is done with springboot and Machine Learning algorithms</p>
+                            <div class="mb-3">
+                                <span class="badge bg-dark">React</span>
+                                <span class="badge bg-dark">SpringBoot</span>
+                                <span class="badge bg-dark">ML</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary mt-auto">GitHub Link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card shadow-sm h-100 border-0 bg-light">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h4 class="card-title fw-bold">Student Management System</h4>
+                            <p class="card-text text-muted flex-grow-1">Efficient Student Managemet system manages all the students updates</p>
+                            <div class="mb-3">
+                                <span class="badge bg-dark">JavaScript</span>
+                                <span class="badge bg-dark">CSS</span>
+                                <span class="badge bg-dark">MongoDB</span>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary mt-auto">GitHub Link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements" class="bg-light">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5" style="color: blue;">Achievements</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card shadow-sm h-100 text-center border-0 border-top border-primary border-5">
+                        <div class="card-body mt-2">
+                            <h5 class="fw-bold text-dark">Certifications</h5>
+                            <p class="text-muted small mt-3">Completed "Frontend Web Development" via Coursera.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card shadow-sm h-100 text-center border-0 border-top border-success border-5">
+                        <div class="card-body mt-2">
+                            <h5 class="fw-bold text-dark">Workshops</h5>
+                            <p class="text-muted small mt-3">Attended a 2-day hands-on workshop on Advanced JavaScript and React JS.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card shadow-sm h-100 text-center border-0 border-top border-warning border-5">
+                        <div class="card-body mt-2">
+                            <h5 class="fw-bold text-dark">Internships</h5>
+                            <p class="text-muted small mt-3">Java Development Intern at XYZ Tech Solutions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card shadow-sm h-100 text-center border-0 border-top border-danger border-5">
+                        <div class="card-body mt-2">
+                            <h5 class="fw-bold text-dark">Awards</h5>
+                            <p class="text-muted small mt-3">1st Prize Winner at the State Level Hackathon 2025 for building a community web portal.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-white pb-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5" style="color: blue;">Contact</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <div class="card shadow p-4 border-0 bg-light">
+                        <div class="card-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label fw-bold">Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label fw-bold">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="subject" class="form-label fw-bold">Subject</label>
+                                    <input type="text" class="form-control" id="subject" placeholder="What is this regarding?" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="message" class="form-label fw-bold">Message</label>
+                                    <textarea class="form-control" id="message" rows="5" placeholder="Write your message here..." required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 py-2 fs-5 fw-bold" style="background-color: blue; border: none;">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center text-white py-4 mt-4" style="background-color: #00008b;">
+        <div class="container">
+            <p class="mb-0 fs-6">&copy; 2026 Eshwar. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header text-white" style="background-color: blue;">
+                    <h5 class="modal-title fw-bold" id="welcomeModalLabel">Hello!</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center p-4">
+                    <h4 class="mb-3 fw-bold">Thanks for visiting my portfolio.</h4>
+                    <p class="text-muted">I am actively looking for internship and entry-level opportunities. Feel free to download my resume or contact me via the form below!</p>
+                </div>
+                <div class="modal-footer justify-content-center border-0">
+                    <button type="button" class="btn btn-secondary px-4" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
